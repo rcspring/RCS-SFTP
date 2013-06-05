@@ -15,6 +15,8 @@
 @property (nonatomic,weak) IBOutlet UITextField* usernameInput;
 @property (nonatomic,weak) IBOutlet UITextField* passwordInput;
 
+@property (nonatomic,weak) IBOutlet UITextField* uploadName;
+
 
 @property (nonatomic,strong) RCS_SCPRequest* request;
 @end

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Ryan Spring. All rights reserved.
 //
 
-#import "RCSSCPTransferCtx.h"
+#import "RCS_SCPTransferCtx.h"
 
 @implementation RCSSCPTransferCtx
 

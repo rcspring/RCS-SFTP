@@ -7,11 +7,11 @@
 //
 
 #import "RCSViewController.h"
-#import "RCSSCPRequest.h"
+#import "RCS_SCPRequest.h"
 
 @interface RCSViewController ()
 
-@property (nonatomic,strong) RCSSCPRequest* request;
+@property (nonatomic,strong) RCS_SCPRequest* request;
 @end
 
 @implementation RCSViewController
@@ -26,7 +26,7 @@
     
     
     
-    self.request = [[RCSSCPRequest alloc]initWithHostname:@"192.168.8.105" Username:@"root" Password:@"smartlink"];
+    self.request = [[RCS_SCPRequest alloc]initWithHostname:@"192.168.8.105" Username:@"root" Password:@"smartlink"];
     self.request.delegate = self;
     
     [self.request startUpload:data toPath:@"rizzo.poo"];
@@ -43,15 +43,15 @@
 
 
 #pragma mark - RCSSCPRequestDelegate
--(void)RCSSCPRequestFailedWithError:(NSError *)error {
+-(void)RCS_SCPRequestFailedWithError:(NSError *)error {
     NSLog(@"Error %@",error);
 }
 
--(void)RCSSCPRequestDownloadCompleted:(NSData *)data {
+-(void)RCS_SCPRequestDownloadCompleted:(NSData *)data {
     NSLog(@"Have data of size %d",data.length);
 }
 
--(void)RCSSCPRequestUploadCompleted {
+-(void)RCS_SCPRequestUploadCompleted {
     NSLog(@"Upload completed");
 }
 @end

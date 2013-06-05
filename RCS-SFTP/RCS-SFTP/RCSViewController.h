@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RCSSCPRequest.h"
+#import "RCS_SCPRequest.h"
 
-@interface RCSViewController : UIViewController <RCSSCPRequestDelegate>
+@interface RCSViewController : UIViewController <RCS_SCPRequestDelegate>
 
 @end

@@ -6,13 +6,15 @@
 //  Copyright (c) 2013 Ryan Spring. All rights reserved.
 //
 
-#import "RCSSCPRequest.h"
+#import "RCS_SCPRequest.h"
+#import "RCS_SCPTransferCtx.h"
+
 #import "libssh2.h"
 #import "libssh2_config.h"
 #import <sys/socket.h>
 #import <netinet/in.h>
 #import <arpa/inet.h>
-#import "RCSSCPTransferCtx.h"
+
 #import <netdb.h>
 
 #define DISPATCH_QUEUE_NAME @"RCSSCPRequest-%d"
@@ -20,7 +22,7 @@
 #define RCS_SCP_REQUEST_DIR_UP 2
 #define TRANSFER_BUFFER_SIZE 1024
 
-@interface RCS-SCPRequest ()
+@interface RCS_SCPRequest ()
 
 @property (nonatomic,strong) NSString* hostname;
 @property (nonatomic,strong) NSString* username;
@@ -29,7 +31,7 @@
 @end
 
 
-@implementation RCS-SCPRequest
+@implementation RCS_SCPRequest
 
 
 -(id)initWithHostname:(NSString*)hostname Username:(NSString*)username Password:(NSString*)password {
@@ -248,7 +250,7 @@
 
     void (^errorHandler)(void) = ^{
         if([self.delegate respondsToSelector:@selector(RCSSCPRequestFailedWithError:)]) {
-            [self.delegate RCSSCPRequestFailedWithError:customError];
+            [self.delegate RCS_SCPRequestFailedWithError:customError];
         }
     };
     
@@ -260,7 +262,7 @@
 -(void)callDelegateWithDownloadResult:(NSData*)data andCtx:(RCSSCPTransferCtx*)ctx {
     void (^callbackHandler)(void) = ^{
         if([self.delegate respondsToSelector:@selector(RCSSCPRequestDownloadCompleted:)]) {
-            [self.delegate RCSSCPRequestDownloadCompleted:data];
+            [self.delegate RCS_SCPRequestDownloadCompleted:data];
         }
     };
     
@@ -271,7 +273,7 @@
 -(void)callDelegateWithUploadCtx:(RCSSCPTransferCtx*)ctx {
     void (^callbackHandler)(void) = ^{
         if([self.delegate respondsToSelector:@selector(RCSSCPRequestUploadCompleted)]) {
-            [self.delegate RCSSCPRequestUploadCompleted];
+            [self.delegate RCS_SCPRequestUploadCompleted];
         }
     };
     

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EC9DE789175D7F1C00930FC1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9DE788175D7F1C00930FC1 /* libz.dylib */; };
+		EC9DE78A175EBE7400930FC1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767A175E3FE100973DD1 /* libcrypto.a */; };
+		EC9DE78B175EBE7800930FC1 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767B175E3FE100973DD1 /* libssh2.a */; };
+		EC9DE78C175EBE7C00930FC1 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767C175E3FE100973DD1 /* libssl.a */; };
 		FC9775E3175D34C800973DD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9775E2175D34C800973DD1 /* UIKit.framework */; };
 		FC9775E5175D34C800973DD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9775E4175D34C800973DD1 /* Foundation.framework */; };
 		FC9775E7175D34C800973DD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9775E6175D34C800973DD1 /* CoreGraphics.framework */; };
@@ -23,11 +26,8 @@
 		FC977667175D35CC00973DD1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FC977612175D35CC00973DD1 /* LICENSE */; };
 		FC977668175D35CC00973DD1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FC977618175D35CC00973DD1 /* LICENSE */; };
 		FC977669175D35CC00973DD1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FC97763D175D35CC00973DD1 /* LICENSE */; };
-		FC97766C175D368C00973DD1 /* RCSSCPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97766B175D368C00973DD1 /* RCSSCPRequest.m */; };
-		FC977672175E3C1200973DD1 /* RCSSCPTransferCtx.m in Sources */ = {isa = PBXBuildFile; fileRef = FC977671175E3C1200973DD1 /* RCSSCPTransferCtx.m */; };
-		FC97767D175E3FE100973DD1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767A175E3FE100973DD1 /* libcrypto.a */; };
-		FC97767E175E3FE100973DD1 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767B175E3FE100973DD1 /* libssh2.a */; };
-		FC97767F175E3FE100973DD1 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767C175E3FE100973DD1 /* libssl.a */; };
+		FC97766C175D368C00973DD1 /* RCS_SCPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97766B175D368C00973DD1 /* RCS_SCPRequest.m */; };
+		FC977672175E3C1200973DD1 /* RCS_SCPTransferCtx.m in Sources */ = {isa = PBXBuildFile; fileRef = FC977671175E3C1200973DD1 /* RCS_SCPTransferCtx.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,10 +134,10 @@
 		FC977663175D35CC00973DD1 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
 		FC977664175D35CC00973DD1 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
 		FC977665175D35CC00973DD1 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
-		FC97766A175D368C00973DD1 /* RCSSCPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSSCPRequest.h; sourceTree = "<group>"; };
-		FC97766B175D368C00973DD1 /* RCSSCPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSSCPRequest.m; sourceTree = "<group>"; };
-		FC977670175E3C1200973DD1 /* RCSSCPTransferCtx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSSCPTransferCtx.h; sourceTree = "<group>"; };
-		FC977671175E3C1200973DD1 /* RCSSCPTransferCtx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSSCPTransferCtx.m; sourceTree = "<group>"; };
+		FC97766A175D368C00973DD1 /* RCS_SCPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCS_SCPRequest.h; sourceTree = "<group>"; };
+		FC97766B175D368C00973DD1 /* RCS_SCPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCS_SCPRequest.m; sourceTree = "<group>"; };
+		FC977670175E3C1200973DD1 /* RCS_SCPTransferCtx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCS_SCPTransferCtx.h; sourceTree = "<group>"; };
+		FC977671175E3C1200973DD1 /* RCS_SCPTransferCtx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCS_SCPTransferCtx.m; sourceTree = "<group>"; };
 		FC97767A175E3FE100973DD1 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		FC97767B175E3FE100973DD1 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssh2.a; sourceTree = "<group>"; };
 		FC97767C175E3FE100973DD1 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
@@ -152,9 +152,9 @@
 				FC9775E3175D34C800973DD1 /* UIKit.framework in Frameworks */,
 				FC9775E5175D34C800973DD1 /* Foundation.framework in Frameworks */,
 				FC9775E7175D34C800973DD1 /* CoreGraphics.framework in Frameworks */,
-				FC97767D175E3FE100973DD1 /* libcrypto.a in Frameworks */,
-				FC97767E175E3FE100973DD1 /* libssh2.a in Frameworks */,
-				FC97767F175E3FE100973DD1 /* libssl.a in Frameworks */,
+				EC9DE78A175EBE7400930FC1 /* libcrypto.a in Frameworks */,
+				EC9DE78B175EBE7800930FC1 /* libssh2.a in Frameworks */,
+				EC9DE78C175EBE7C00930FC1 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,10 +194,10 @@
 			children = (
 				FC9775F1175D34C800973DD1 /* RCSAppDelegate.h */,
 				FC9775F2175D34C800973DD1 /* RCSAppDelegate.m */,
-				FC97766A175D368C00973DD1 /* RCSSCPRequest.h */,
-				FC97766B175D368C00973DD1 /* RCSSCPRequest.m */,
-				FC977670175E3C1200973DD1 /* RCSSCPTransferCtx.h */,
-				FC977671175E3C1200973DD1 /* RCSSCPTransferCtx.m */,
+				FC97766A175D368C00973DD1 /* RCS_SCPRequest.h */,
+				FC97766B175D368C00973DD1 /* RCS_SCPRequest.m */,
+				FC977670175E3C1200973DD1 /* RCS_SCPTransferCtx.h */,
+				FC977671175E3C1200973DD1 /* RCS_SCPTransferCtx.m */,
 				FC9775FA175D34C900973DD1 /* MainStoryboard.storyboard */,
 				FC9775FD175D34C900973DD1 /* RCSViewController.h */,
 				FC9775FE175D34C900973DD1 /* RCSViewController.m */,
@@ -431,8 +431,8 @@
 				FC9775EF175D34C800973DD1 /* main.m in Sources */,
 				FC9775F3175D34C800973DD1 /* RCSAppDelegate.m in Sources */,
 				FC9775FF175D34C900973DD1 /* RCSViewController.m in Sources */,
-				FC97766C175D368C00973DD1 /* RCSSCPRequest.m in Sources */,
-				FC977672175E3C1200973DD1 /* RCSSCPTransferCtx.m in Sources */,
+				FC97766C175D368C00973DD1 /* RCS_SCPRequest.m in Sources */,
+				FC977672175E3C1200973DD1 /* RCS_SCPTransferCtx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,12 +518,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RCSSCP/RCS-SFTP-Prefix.pch";
+				GCC_PREFIX_HEADER = "RCS-SFTP/RCS-SFTP-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/RCS-SFTP/RCS-SFTP-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/RCSSCP/lib\"",
+					"\"$(SRCROOT)/RCS-SFTP/lib\"",
 				);
 				PRODUCT_NAME = "RCS-SFTP";
 				WRAPPER_EXTENSION = app;
@@ -534,12 +535,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RCSSCP/RCS-SFTP-Prefix.pch";
+				GCC_PREFIX_HEADER = "RCS-SFTP/RCS-SFTP-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/RCS-SFTP/RCS-SFTP-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/RCSSCP/lib\"",
+					"\"$(SRCROOT)/RCS-SFTP/lib\"",
 				);
 				PRODUCT_NAME = "RCS-SFTP";
 				WRAPPER_EXTENSION = app;

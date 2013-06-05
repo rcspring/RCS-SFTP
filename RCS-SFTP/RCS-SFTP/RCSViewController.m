@@ -11,6 +11,11 @@
 
 @interface RCSViewController ()
 
+@property (nonatomic,weak) IBOutlet UITextField* addressInput;
+@property (nonatomic,weak) IBOutlet UITextField* usernameInput;
+@property (nonatomic,weak) IBOutlet UITextField* passwordInput;
+
+
 @property (nonatomic,strong) RCS_SCPRequest* request;
 @end
 
@@ -24,13 +29,9 @@
     
     NSMutableData* data = [NSMutableData dataWithBytes:text length:strlen(text)];
     
+    self.addressInput.text = @"192.168.1.1";
+    self.usernameInput.text = @"rcspring";
     
-    
-    self.request = [[RCS_SCPRequest alloc]initWithHostname:@"192.168.8.105" Username:@"root" Password:@"smartlink"];
-    self.request.delegate = self;
-    
-    [self.request startUpload:data toPath:@"rizzo.poo"];
-    //[self.request startDownload:data fromPath:@"install.log"];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

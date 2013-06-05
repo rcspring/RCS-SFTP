@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RCS_SCPRequest.h"
 
-@interface RCSViewController : UIViewController <RCS_SCPRequestDelegate>
+@interface RCSViewController : UIViewController <RCS_SCPRequestDelegate,UINavigationControllerDelegate,UITextFieldDelegate,UIImagePickerControllerDelegate>
 
 @end

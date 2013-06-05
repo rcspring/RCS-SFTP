@@ -19,6 +19,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="eRT-da-6I3"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2uH-2a-OeP">
                                 <constraints>
@@ -26,6 +29,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="N8i-aN-ogO"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qKM-Jb-uzs">
                                 <constraints>
@@ -33,6 +39,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="j6C-hA-G9B"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf4-KK-GFl">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -53,6 +62,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addUploadItem:" destination="2" eventType="touchUpInside" id="Yra-u6-fwg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Select Item" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2H-pP-d7l">
                                 <constraints>
@@ -60,21 +72,40 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="2q2-AS-mfk"/>
+                                </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOX-dt-VpQ">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Transfer">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="transferItem:" destination="2" eventType="touchUpInside" id="KwT-OU-Hir"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="V2H-pP-d7l" secondAttribute="bottom" constant="235" id="4qA-qf-seA"/>
                             <constraint firstItem="xRZ-eu-FtU" firstAttribute="leading" secondItem="2uH-2a-OeP" secondAttribute="leading" type="default" id="8Wm-UV-GdN"/>
+                            <constraint firstItem="vOX-dt-VpQ" firstAttribute="leading" secondItem="Bf4-KK-GFl" secondAttribute="leading" type="default" id="DQb-6C-RPt"/>
+                            <constraint firstItem="vOX-dt-VpQ" firstAttribute="centerX" secondItem="cOD-gr-6Hn" secondAttribute="centerX" type="default" id="G8b-01-FdG"/>
                             <constraint firstAttribute="bottom" secondItem="cOD-gr-6Hn" secondAttribute="bottom" constant="196" id="LC7-LH-Br8"/>
                             <constraint firstAttribute="trailing" secondItem="xRZ-eu-FtU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ohg-pf-wup"/>
                             <constraint firstAttribute="trailing" secondItem="2uH-2a-OeP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="PDv-SG-QAT"/>
                             <constraint firstItem="qKM-Jb-uzs" firstAttribute="top" secondItem="3" secondAttribute="top" constant="208" id="U9M-ve-8g6"/>
                             <constraint firstAttribute="trailing" secondItem="qKM-Jb-uzs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UFP-N7-HAa"/>
-                            <constraint firstItem="cOD-gr-6Hn" firstAttribute="centerX" secondItem="Bf4-KK-GFl" secondAttribute="centerX" type="default" id="cFl-2N-nl9"/>
+                            <constraint firstItem="vOX-dt-VpQ" firstAttribute="top" secondItem="Bf4-KK-GFl" secondAttribute="top" type="default" id="bTu-Se-ak6"/>
                             <constraint firstItem="2uH-2a-OeP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="124" id="f8i-IF-VE9"/>
                             <constraint firstItem="qKM-Jb-uzs" firstAttribute="leading" secondItem="2uH-2a-OeP" secondAttribute="leading" type="default" id="pRQ-bc-QCy"/>
                             <constraint firstItem="Bf4-KK-GFl" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="qmD-31-Vys"/>
+                            <constraint firstItem="vOX-dt-VpQ" firstAttribute="baseline" secondItem="Bf4-KK-GFl" secondAttribute="baseline" type="default" id="uZs-Wj-G41"/>
                             <constraint firstAttribute="trailing" secondItem="V2H-pP-d7l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uv2-0d-SeQ"/>
                             <constraint firstAttribute="bottom" secondItem="Bf4-KK-GFl" secondAttribute="bottom" constant="59" id="wBZ-oK-P4i"/>
                             <constraint firstItem="qKM-Jb-uzs" firstAttribute="leading" secondItem="V2H-pP-d7l" secondAttribute="leading" type="default" id="xw5-Kw-Jno"/>
@@ -84,6 +115,7 @@
                     <connections>
                         <outlet property="addressInput" destination="xRZ-eu-FtU" id="1T8-vi-vPL"/>
                         <outlet property="passwordInput" destination="qKM-Jb-uzs" id="iM5-JX-Mxa"/>
+                        <outlet property="uploadName" destination="V2H-pP-d7l" id="eXf-VH-vRa"/>
                         <outlet property="usernameInput" destination="2uH-2a-OeP" id="G0R-YF-Un0"/>
                     </connections>
                 </viewController>
@@ -98,6 +130,8 @@
         <class className="RCSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RCSViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addUploadItem:"/>
+                <relationship kind="action" name="transferItem:"/>
                 <relationship kind="outlet" name="addressInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="uploadName" candidateClass="UITextField"/>

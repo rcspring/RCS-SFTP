@@ -11,6 +11,7 @@
 		EC9DE78A175EBE7400930FC1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767A175E3FE100973DD1 /* libcrypto.a */; };
 		EC9DE78B175EBE7800930FC1 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767B175E3FE100973DD1 /* libssh2.a */; };
 		EC9DE78C175EBE7C00930FC1 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97767C175E3FE100973DD1 /* libssl.a */; };
+		EC9DE78E175ECA2C00930FC1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9DE78D175ECA2C00930FC1 /* AssetsLibrary.framework */; };
 		FC9775E3175D34C800973DD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9775E2175D34C800973DD1 /* UIKit.framework */; };
 		FC9775E5175D34C800973DD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9775E4175D34C800973DD1 /* Foundation.framework */; };
 		FC9775E7175D34C800973DD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9775E6175D34C800973DD1 /* CoreGraphics.framework */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		EC9DE788175D7F1C00930FC1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EC9DE78D175ECA2C00930FC1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		FC9775DF175D34C800973DD1 /* RCS-SFTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RCS-SFTP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9775E2175D34C800973DD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC9775E4175D34C800973DD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9DE78E175ECA2C00930FC1 /* AssetsLibrary.framework in Frameworks */,
 				EC9DE789175D7F1C00930FC1 /* libz.dylib in Frameworks */,
 				FC9775E3175D34C800973DD1 /* UIKit.framework in Frameworks */,
 				FC9775E5175D34C800973DD1 /* Foundation.framework in Frameworks */,
@@ -164,6 +167,7 @@
 		FC9775D6175D34C800973DD1 = {
 			isa = PBXGroup;
 			children = (
+				EC9DE78D175ECA2C00930FC1 /* AssetsLibrary.framework */,
 				FC9775E8175D34C800973DD1 /* RCS-SFTP */,
 				FC9775E1175D34C800973DD1 /* Frameworks */,
 				FC9775E0175D34C800973DD1 /* Products */,

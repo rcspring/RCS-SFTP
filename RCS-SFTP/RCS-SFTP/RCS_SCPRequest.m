@@ -100,8 +100,11 @@
     
     hostaddr = inet_addr([self.hostname cStringUsingEncoding:NSUTF8StringEncoding]);
     
+    NSLog(@"Connect %@",self.hostname);
+    
     ctx.sock = socket(AF_INET, SOCK_STREAM, 0);
     
+    NSLog(@"Start connect");
     
     
     sin.sin_family = AF_INET;
@@ -115,22 +118,28 @@
         return;
     }
     
+    NSLog(@"End connect");
+    
+    
     ctx.session = libssh2_session_init();
     
     if(!ctx.session) {
         return;
     }
-    
+    NSLog(@"Shandshake");
     rc = libssh2_session_handshake(ctx.session, ctx.sock);
-    
+   
     if(rc) {
         NSLog(@"Failure establishing SSH session:  %d", rc);
         return;
     }
-    
+     NSLog(@"Ehandshake");
     int retVal = libssh2_userauth_password(ctx.session, [self.username cStringUsingEncoding:NSUTF8StringEncoding],[self.pwd cStringUsingEncoding:NSUTF8StringEncoding]);
     
+    
+    NSLog(@"EPWD %@:%@",self.username,self.pwd);
     if (retVal) {
+        NSLog(@"Fail auth %d",retVal);
         [self callDelegateWithError:@"Authentication Failed" andCtx:ctx];
         [self shutdownSession:ctx];
         return;
@@ -141,6 +150,7 @@
     }
     
     if(ctx.direction == RCS_SCP_REQUEST_DIR_UP) {
+        NSLog(@"Startin up");
         [self handleUpload:ctx];
     }
     
@@ -181,7 +191,10 @@
     off_t sent = 0;
     off_t wc;
     
+    NSLog(@"Start");
     ctx.channel = libssh2_scp_send(ctx.session, [ctx.path cStringUsingEncoding:NSUTF8StringEncoding], S_IRWXU, ctx.data.length);
+    
+    NSLog(@"End");
     
     
     if (!ctx.channel) {
@@ -194,6 +207,8 @@
     while(sent < ctx.data.length) {
         char buff[TRANSFER_BUFFER_SIZE];
         
+        
+        NSLog(@"Wirte buff");
         NSUInteger length = ctx.data.length - sent > TRANSFER_BUFFER_SIZE ? TRANSFER_BUFFER_SIZE : ctx.data.length - sent;
         NSRange readRange = NSMakeRange(sent, length);
         
@@ -249,8 +264,11 @@
     NSError* customError = [NSError errorWithDomain:errorText code:1 userInfo:nil];
 
     void (^errorHandler)(void) = ^{
-        if([self.delegate respondsToSelector:@selector(RCSSCPRequestFailedWithError:)]) {
+        if([self.delegate respondsToSelector:@selector(RCS_SCPRequestFailedWithError:)]) {
             [self.delegate RCS_SCPRequestFailedWithError:customError];
+        }
+        else {
+            NSLog(@"DOesn't respond");
         }
     };
     
@@ -261,7 +279,7 @@
 
 -(void)callDelegateWithDownloadResult:(NSData*)data andCtx:(RCSSCPTransferCtx*)ctx {
     void (^callbackHandler)(void) = ^{
-        if([self.delegate respondsToSelector:@selector(RCSSCPRequestDownloadCompleted:)]) {
+        if([self.delegate respondsToSelector:@selector(RCS_SCPRequestDownloadCompleted:)]) {
             [self.delegate RCS_SCPRequestDownloadCompleted:data];
         }
     };
@@ -272,7 +290,7 @@
 
 -(void)callDelegateWithUploadCtx:(RCSSCPTransferCtx*)ctx {
     void (^callbackHandler)(void) = ^{
-        if([self.delegate respondsToSelector:@selector(RCSSCPRequestUploadCompleted)]) {
+        if([self.delegate respondsToSelector:@selector(RCS_SCPRequestUploadCompleted)]) {
             [self.delegate RCS_SCPRequestUploadCompleted];
         }
     };
